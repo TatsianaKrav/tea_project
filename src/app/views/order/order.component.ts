@@ -26,7 +26,7 @@ export class OrderComponent implements OnDestroy {
     country: ['', [Validators.required, Validators.pattern('^[а-яА-я]+$')]],
     index: ['', [Validators.required, Validators.pattern('^[0-9]+$')]],
     address: ['', [Validators.required, Validators.pattern('^[а-яА-я0-9\\-\\s\\/]*$')]],
-    product: [this.productService.productTitle],
+    product: [{value: this.productService.productTitle, disabled: true}],
     comment: ['']
   })
 

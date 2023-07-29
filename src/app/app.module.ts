@@ -3,38 +3,30 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MainComponent } from './components/pages/main/main.component';
-import {NavbarComponent} from "./components/common/navbar/navbar.component";
-import {FooterComponent} from "./components/common/footer/footer.component";
-import { ProductsComponent } from './components/pages/products/products.component';
-import { OrderComponent } from './components/pages/order/order.component';
-import { ProductComponent } from './components/pages/product/product.component';
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {AccordionModule} from "ngx-bootstrap/accordion";
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {ProductsModule} from "./views/products/products.module";
+import {MainModule} from "./views/main/main.module";
+import {OrderModule} from "./views/order/order.module";
+import {SharedModule} from "./shared/shared.module";
 
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    MainComponent,
-    NavbarComponent,
-    FooterComponent,
-    ProductsComponent,
-    OrderComponent,
-    ProductComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ProductsModule,
+    MainModule,
+    OrderModule,
+    SharedModule,
     ReactiveFormsModule,
     FormsModule,
-    BrowserAnimationsModule,
-    AccordionModule.forRoot(),
     NgbModule
   ],
   providers: [],

@@ -1,8 +1,8 @@
 import {Component} from '@angular/core';
-import {ProductType} from "../../../types/product-type";
 import {ActivatedRoute, Router} from "@angular/router";
-import {ProductsService} from "../../../services/products.service";
-import {ProductService} from "../../../services/product.service";
+import {ProductType} from "../../../../types/product-type";
+import {ProductsService} from "../../../shared/services/products.service";
+import {ProductService} from "../../../shared/services/product.service";
 
 @Component({
   selector: 'product',

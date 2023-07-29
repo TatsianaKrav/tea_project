@@ -1,6 +1,5 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {FormValueType} from "../types/form-value-type";
 
 @Injectable({
   providedIn: 'root'

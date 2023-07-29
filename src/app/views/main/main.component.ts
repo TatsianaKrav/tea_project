@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ElementRef, OnDestroy, OnInit, TemplateRef, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, OnDestroy, TemplateRef, ViewChild} from '@angular/core';
 import {Observable, Subscription} from "rxjs";
 import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
 
@@ -31,9 +31,9 @@ export class MainComponent implements OnDestroy, AfterViewInit {
     });
   }
 
-  close() {
-    // this.modal.nativeElement.style.display = 'none';
-  }
+  // close() {
+  //   this.modal.nativeElement.style.display = 'none';
+  // }
 
 
   // ngOnInit() {
@@ -44,7 +44,7 @@ export class MainComponent implements OnDestroy, AfterViewInit {
 
   ngAfterViewInit() {
     this.subscription = this.observable.subscribe((param) => {
-      this.modalService.open(this.modal, {});
+      this.modalService.open(param, {});
     })
   }
 

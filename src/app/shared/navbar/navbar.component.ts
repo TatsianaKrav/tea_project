@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
-import {ProductsService} from "../../../services/products.service";
-import {ProductService} from "../../../services/product.service";
 import {Router} from "@angular/router";
+import {ProductService} from "../services/product.service";
+import {ProductsService} from "../services/products.service";
 
 @Component({
   selector: 'navbar-component',
@@ -12,7 +12,8 @@ export class NavbarComponent {
 
   value: string = '';
 
-  constructor(private productsService: ProductsService, private productService: ProductService, private router: Router) {
+  constructor(private productsService: ProductsService, private productService: ProductService,
+              private router: Router) {
 
   }
 

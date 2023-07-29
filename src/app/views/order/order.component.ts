@@ -1,8 +1,8 @@
 import {Component, OnDestroy} from '@angular/core';
-import {FormBuilder, NonNullableFormBuilder, Validators} from "@angular/forms";
-import {ProductService} from "../../../services/product.service";
-import {Subscription, tap} from "rxjs";
-import {OrderService} from "../../../services/order.service";
+import {NonNullableFormBuilder, Validators} from "@angular/forms";
+import {Subscription} from "rxjs";
+import {ProductService} from "../../shared/services/product.service";
+import {OrderService} from "../../shared/services/order.service";
 
 @Component({
   selector: 'order',
@@ -59,6 +59,7 @@ export class OrderComponent implements OnDestroy {
 
         if (response.success && !response.message) {
           this.isSuccessful = true;
+          this.isShown = false;
 
         } else {
           this.isSuccessful = false;

@@ -1,0 +1,136 @@
+<div class="main-form w-50 mt-5 vh-100" style="margin:0 auto">
+  <h2 class="fw-bold text-center mb-5 text-black" *ngIf="!isSuccessful">Сделать заказ</h2>
+  <form class="row gx-4 gy-3 mt-2 needs-validation" novalidate [formGroup]="orderForm" *ngIf="!isSuccessful">
+    <div class="col-12 col-sm-6 col-md-4 ">
+      <div class="input form-check">
+        <span class="d-block mb-2 text-black">Имя</span>
+        <label>
+          <input type="text" class="form-control" id="name" formControlName="name">
+        </label>
+      </div>
+      <div class="invalid-feedback" *ngIf="orderForm.get('name')?.invalid
+              && (orderForm.get('name')?.touched || orderForm.get('name')?.dirty)
+              && orderForm.get('name')?.errors?.['required']">
+        Заполните поле Имя.
+      </div>
+      <div class="invalid-feedback" *ngIf="orderForm.get('name')?.invalid
+              && (orderForm.get('name')?.touched || orderForm.get('name')?.dirty)
+              && orderForm.get('name')?.errors?.['pattern']">
+        Можно ввести только буквы.
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4">
+      <div class="input form-check">
+        <span class="d-block mb-2 text-black">Фамилия</span>
+        <label>
+          <input type="text" class="form-control" id="lastName" formControlName="lastName">
+        </label>
+      </div>
+      <div class="invalid-feedback" *ngIf="orderForm.get('lastName')?.invalid
+              && (orderForm.get('lastName')?.touched || orderForm.get('lastName')?.dirty)
+              && orderForm.get('lastName')?.errors?.['required']">
+        Заполните поле Фамилия.
+      </div>
+      <div class="invalid-feedback" *ngIf="orderForm.get('lastName')?.invalid
+              && (orderForm.get('lastName')?.touched || orderForm.get('lastName')?.dirty)
+              && orderForm.get('lastName')?.errors?.['pattern']">
+        Можно ввести только буквы.
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4">
+      <div class="input form-check">
+        <span class="d-block mb-2 text-black">Телефон</span>
+        <label>
+          <input type="text" class="form-control" id="phone" formControlName="phone">
+        </label>
+      </div>
+      <div class="invalid-feedback" *ngIf="orderForm.get('phone')?.invalid
+              && (orderForm.get('phone')?.touched || orderForm.get('phone')?.dirty)
+              && orderForm.get('phone')?.errors?.['required']">
+        Заполните поле Телефон.
+      </div>
+      <div class="invalid-feedback" *ngIf="orderForm.get('phone')?.invalid
+              && (orderForm.get('phone')?.touched || orderForm.get('phone')?.dirty)
+              && orderForm.get('phone')?.errors?.['pattern']">
+        В поле «Телефон» можно вводить только цифры и знак +. Номер должен содержать 11 цифр.
+      </div>
+    </div>
+    <div class="col-12 col-sm-6">
+      <div class="input form-check">
+        <span class="d-block mb-2 text-black">Страна</span>
+        <label class="w-100">
+          <input type="text" class="form-control" id="country" formControlName="country">
+        </label>
+      </div>
+      <div class="invalid-feedback" *ngIf="orderForm.get('country')?.invalid
+              && (orderForm.get('country')?.touched || orderForm.get('country')?.dirty)
+              && orderForm.get('country')?.errors?.['required']">
+        Заполните поле Страна.
+      </div>
+      <div class="invalid-feedback" *ngIf="orderForm.get('country')?.invalid
+              && (orderForm.get('country')?.touched || orderForm.get('country')?.dirty)
+              && orderForm.get('country')?.errors?.['pattern']">
+        Можно ввести только буквы.
+      </div>
+    </div>
+    <div class="col-12 col-sm-6">
+      <div class="input form-check">
+        <span class="d-block mb-2 text-black">Индекс</span>
+        <label class="w-100">
+          <input type="text" maxlength="6" class="form-control" id="index" formControlName="index">
+        </label>
+      </div>
+      <div class="invalid-feedback" *ngIf="orderForm.get('index')?.invalid
+              && (orderForm.get('index')?.touched || orderForm.get('index')?.dirty)
+              && orderForm.get('index')?.errors?.['required']">
+        Заполните поле Индекс.
+      </div>
+      <div class="invalid-feedback" *ngIf="orderForm.get('index')?.invalid
+              && (orderForm.get('index')?.touched || orderForm.get('index')?.dirty)
+              && orderForm.get('index')?.errors?.['pattern']">
+        Можно ввести только цифры.
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-lg-12">
+      <div class="input form-check">
+        <span class="d-block mb-2 text-black">Адрес</span>
+        <label class="w-100">
+          <input type="text" class="form-control" id="address" formControlName="address">
+        </label>
+      </div>
+      <div class="invalid-feedback" *ngIf="orderForm.get('address')?.invalid
+              && (orderForm.get('address')?.touched || orderForm.get('address')?.dirty)
+              && orderForm.get('address')?.errors?.['required']">
+        Заполните поле Адрес.
+      </div>
+      <div class="invalid-feedback" *ngIf="orderForm.get('address')?.invalid
+              && (orderForm.get('address')?.touched || orderForm.get('address')?.dirty)
+              && orderForm.get('address')?.errors?.['pattern']">
+        Можно ввести только буквы, цифры, пробелы, дефис и слеш.
+      </div>
+    </div>
+    <div class="col-12 col-sm-6">
+      <div class="input form-check">
+        <span class="d-block mb-2 text-black">Товар</span>
+        <label class="w-100">
+          <input type="text" [readOnly]="true" class="form-control" id="product" formControlName="product">
+        </label>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6">
+      <div class="input form-check">
+        <span class="d-block mb-2 text-black">Комментарий к заказу</span>
+        <label class="w-100">
+          <input type="text" maxlength="6" class="form-control" id="comment" formControlName="comment">
+        </label>
+      </div>
+    </div>
+    <div class="form-btn mt-4 text-center">
+      <button class="btn hvr-grow-shadow hvr-radial-out btn-send text-white py-2 px-4 rounded border-0 bg-primary text-center"
+              type="submit" [disabled]="checkData()" (click)="createOrder()" >Отправить</button>
+    </div>
+    <div class="form-error text-center text-danger" *ngIf="isShown">Произошла ошибка. Попробуйте еще раз.</div>
+  </form>
+  <div class="post text-center" *ngIf="isSuccessful" style="margin:0 auto">Спасибо за заказ!</div>
+
+</div>

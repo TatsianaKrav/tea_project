@@ -1,0 +1,83 @@
+<div class="container d-flex flex-column align-items-center justify-content-center py-5">
+  <div class="main-image mw-100 mt-4">
+    <div class="bg-image mw-100">
+      <img src="assets/images/tea1.png" alt="tea1" class="w-100">
+    </div>
+  </div>
+  <div class="main-questions w-75 my-5">
+    <h2 class="mb-5 mt-3 text-center fw-bold text-black">Ответы на часто задаваемые вопросы</h2>
+    <accordion>
+
+        <accordion-group heading="Собираете ли вы подарочные боксы?" [isOpen]="true">
+          Да, у нас есть такая услуга. Мы можем собрать подарочный бокс на любой вкус, объем и стоимость!
+        </accordion-group>
+
+      <accordion-group heading="Сколько у вас разновидностей чая?" class="mt-3">
+        У нас представлены 6 сортов.
+      </accordion-group>
+      <accordion-group heading="В какой срок осуществляется доставка?" class="mt-3">
+        По городу 1-2 дня в зависимости от времени оформления заказа. В другие города 3-5 дней.
+      </accordion-group>
+      <accordion-group heading="У вас обновляется ассортимент?" class="mt-3">
+        Да, конечно, периодически есть привозы чаев из различных самых далеких регионов и стран.
+      </accordion-group>
+      <accordion-group heading="Какого объема у вас пачки чая?" class="mt-3">
+        Есть стандартный объем 50гр, 100гр и 150гр. Но вы также можете приобрести листовой чай на развес, он будет
+        красиво упакован.
+      </accordion-group>
+    </accordion>
+  </div>
+  <!--    <div id="accordion" class=" m-auto">-->
+  <!--      <h3 class="text-white bg-primary bg-gradient p-4 rounded ">Собираете ли вы подарочные боксы?</h3>-->
+  <!--      <div >-->
+  <!--        <p class="mb-0">-->
+  <!--          Да, у нас есть такая услуга. Мы можем собрать подарочный бокс на любой вкус, объем и стоимость!-->
+  <!--        </p>-->
+  <!--      </div>-->
+  <!--      <h3 class="text-white bg-primary bg-gradient p-4 rounded mt-3">Сколько у вас разновидностей чая?</h3>-->
+  <!--      <div>-->
+  <!--        <p class="mb-0">-->
+  <!--          У нас представлены 6 сортов.-->
+  <!--        </p>-->
+  <!--      </div>-->
+  <!--      <h3 class="text-white bg-primary bg-gradient p-4 rounded mt-3">В какой срок осуществляется доставка?</h3>-->
+  <!--      <div>-->
+  <!--        <p class="mb-0">-->
+  <!--          По городу 1-2 дня в зависимости от времени оформления заказа. В другие города 3-5 дней.-->
+  <!--        </p>-->
+  <!--      </div>-->
+  <!--      <h3 class="text-white bg-primary bg-gradient p-4 rounded mt-3">У вас обновляется ассортимент?</h3>-->
+  <!--      <div>-->
+  <!--        <p class="mb-0">-->
+  <!--          Да, конечно, периодически есть привозы чаев из различных самых далеких регионов и стран.-->
+  <!--        </p>-->
+  <!--      </div>-->
+  <!--      <h3 class="text-white bg-primary bg-gradient p-4 rounded mt-3">Какого объема у вас пачки чая?</h3>-->
+  <!--      <div>-->
+  <!--        <p class="mb-0">-->
+  <!--          Есть стандартный объем 50гр, 100гр и 150гр. Но вы также можете приобрести листовой чай на-->
+  <!--          развес, он будет красиво упакован.-->
+  <!--        </p>-->
+  <!--      </div>-->
+
+  <!--    </div>-->
+
+
+  <div class="modal" #modal id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"
+                  (click)="close()"></button>
+        </div>
+        <div class="modal-body text-center">
+          Посмотрите наши чайные коллекции
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" routerLink="/products">Смотреть</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

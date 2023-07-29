@@ -1,0 +1,15 @@
+<div class="card w-50 h-50 my-4" style="margin:0 auto">
+  <a href="#" class="item-image text-center">
+    <img src="{{product.image}}" class="card-img-top w-50" alt="item1">
+  </a>
+  <div class="card-body  d-flex flex-column justify-content-between">
+    <div class="mb-4">
+      <h5 class="card-title fw-bold fs-5 text-black">{{product.title}}</h5>
+      <p class="card-text text-black">{{product.description}}</p>
+    </div>
+    <div>
+      <div class="price mb-2 fw-semibold">Цена: {{product.price}}р.</div>
+      <a href="#" class="btn btn-primary hvr-float-shadow price-btn" routerLink="/order">Купить</a>
+    </div>
+  </div>
+</div>

@@ -1,1 +1,182 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: Arial;
+  src: url("assets/fonts/ArialMT.ttf");
+}
+
+@font-face {
+  font-family: ArialBold;
+  src: url("assets/fonts/Arial-BoldMT.ttf");
+}
+
+body, html, app-root, {
+  font-family: Arial, sans-serif;
+}
+
+h1, h2, h5 {
+  font-family: ArialBold, sans-serif;
+}
+
+a:hover {
+  color: black !important;
+}
+
+.main-items .btn, .price-btn {
+  width: 110px;
+}
+
+.nav-item a.active {
+  color: black;
+}
+
+.form-control:focus{
+  box-shadow: none;
+  outline: none;
+}
+
+input .ng-invalid.ng-dirty,
+input .ng-invalid.ng-touched {
+  border-color: red;
+}
+
+.invalid-feedback {
+  display: block;
+}
+
+.modal-header, .modal-footer {
+  border: none !important;
+}
+
+.modal-footer {
+  justify-content: center;
+}
+
+.btn-close {
+  z-index: 1000;
+}
+.panel-heading.card-header.panel-enabled {
+  background: #0d6efd;
+  padding: 18px 12px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.panel.card.panel-default {
+  border-radius: 10px;
+}
+
+.btn-link {
+  color: white !important;
+}
+
+.btn-link {
+  text-decoration: none !important;
+}
+
+
+
+.panel.panel-open .ui-icon {
+  transform: rotate(180deg);
+}
+
+.ui-icon {
+  background-image: url("assets/images/arrowdown.png") !important;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 37px;
+  right: 28px;
+  width: 15px;
+  height: 15px;
+  z-index: 500;
+}
+
+.item {
+  position: relative;
+}
+
+.ui-accordion{
+  position: relative;
+}
+
+.accordion-toggle[aria-expanded="true"]:after {
+  content: '';
+  background-image: url("assets/images/arrowdown.png");
+  transform: rotate(180deg);
+  background-size: cover;
+  background-position: center;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: 15px;
+  top: 30px;
+}
+
+.accordion-toggle[aria-expanded="false"]:after {
+  content: '';
+  background-image: url("assets/images/arrowdown.png");
+  background-size: cover;
+  background-position: center;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: 15px;
+  top: 30px;
+}
+
+.panel-heading.card-header.panel-enabled.panel.panel-open .ui-icon{
+  transform: rotate(180deg);
+}
+
+
+.hvr-radial-out:before {
+  background: rgba(11, 24, 72, 0.61) !important;
+}
+
+.loader-bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.49);
+}
+
+.loader {
+  border: 15px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 15px solid #0d6efd;
+  width: 120px;
+  height: 120px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg)
+  }
+
+  100% {
+    transform: rotate(360deg)
+  }
+
+}
+
+@media screen and (max-width: 520px){
+  .ui-icon{
+    right: 10px;
+  }
+}
+
+/* Importing Bootstrap SCSS file. */
+@import "./node_modules/bootstrap/scss/bootstrap";
+
+/* Importing Datepicker SCSS file. */
+@import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";

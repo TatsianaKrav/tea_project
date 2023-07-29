@@ -13,6 +13,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {AccordionModule} from "ngx-bootstrap/accordion";
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -34,6 +35,7 @@ import {AccordionModule} from "ngx-bootstrap/accordion";
     FormsModule,
     BrowserAnimationsModule,
     AccordionModule.forRoot(),
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

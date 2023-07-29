@@ -62,22 +62,35 @@
 
   <!--    </div>-->
 
+<!--<ng-template #modal let-modal>-->
+<!--  <div class=""  id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">-->
+<!--    <div class="modal-dialog">-->
+<!--      <div class="modal-content">-->
+<!--        <div class="modal-header">-->
+<!--          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"-->
+<!--                  (click)="close()"></button>-->
+<!--        </div>-->
+<!--        <div class="modal-body text-center">-->
+<!--          Посмотрите наши чайные коллекции-->
+<!--        </div>-->
+<!--        <div class="modal-footer">-->
+<!--          <button type="button" class="btn btn-primary" routerLink="/products">Смотреть</button>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</ng-template>-->
 
-  <div class="modal" #modal id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"
-                  (click)="close()"></button>
-        </div>
-        <div class="modal-body text-center">
-          Посмотрите наши чайные коллекции
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" routerLink="/products">Смотреть</button>
-        </div>
-      </div>
+  <ng-template #modal let-modal>
+    <div class="modal-header">
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
     </div>
-  </div>
+    <div class="modal-body text-center popup-text">
+      Посмотрите наши чайные коллекции
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary popup-btn" routerLink="/products">Смотреть</button>
+    </div>
+  </ng-template>
 
 </div>

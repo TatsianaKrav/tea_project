@@ -5,8 +5,6 @@ import { MainRoutingModule } from './main-routing.module';
 import {MainComponent} from "./main.component";
 import {SharedModule} from "../../shared/shared.module";
 import {RouterModule} from "@angular/router";
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {AccordionModule} from "ngx-bootstrap/accordion";
 import {NgbAccordionModule} from "@ng-bootstrap/ng-bootstrap";
 
 

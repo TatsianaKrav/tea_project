@@ -6,6 +6,73 @@
   </div>
   <div class="main-questions w-75 my-5">
     <h2 class="mb-5 mt-3 text-center fw-bold text-black">Ответы на часто задаваемые вопросы</h2>
+
+    <div ngbAccordion >
+      <div ngbAccordionItem>
+        <h2 ngbAccordionHeader >
+          <button ngbAccordionButton class="bg-primary text-white">Собираете ли вы подарочные боксы?</button>
+        </h2>
+        <div ngbAccordionCollapse>
+          <div ngbAccordionBody>
+            <ng-template>
+              Да, у нас есть такая услуга. Мы можем собрать подарочный бокс на любой вкус, объем и стоимость!
+            </ng-template>
+          </div>
+        </div>
+      </div>
+      <div ngbAccordionItem class="mt-3">
+        <h2 ngbAccordionHeader>
+          <button ngbAccordionButton class="bg-primary text-white">
+            Сколько у вас разновидностей чая?
+          </button>
+        </h2>
+        <div ngbAccordionCollapse>
+          <div ngbAccordionBody>
+            <ng-template>
+              У нас представлены 6 сортов.
+            </ng-template>
+          </div>
+        </div>
+      </div>
+      <div ngbAccordionItem class="mt-3">
+        <h2 ngbAccordionHeader>
+          <button ngbAccordionButton class="bg-primary text-white">В какой срок осуществляется доставка?</button>
+        </h2>
+        <div ngbAccordionCollapse>
+          <div ngbAccordionBody>
+            <ng-template>
+              По городу 1-2 дня в зависимости от времени оформления заказа. В другие города 3-5 дней.
+            </ng-template>
+          </div>
+        </div>
+      </div>
+      <div ngbAccordionItem class="mt-3">
+        <h2 ngbAccordionHeader>
+          <button ngbAccordionButton class="bg-primary text-white">У вас обновляется ассортимент?</button>
+        </h2>
+        <div ngbAccordionCollapse>
+          <div ngbAccordionBody>
+            <ng-template>
+              Да, конечно, периодически есть привозы чаев из различных самых далеких регионов и стран.
+            </ng-template>
+          </div>
+        </div>
+      </div>
+      <div ngbAccordionItem class="mt-3">
+        <h2 ngbAccordionHeader>
+          <button ngbAccordionButton class="bg-primary text-white">Какого объема у вас пачки чая?</button>
+        </h2>
+        <div ngbAccordionCollapse>
+          <div ngbAccordionBody>
+            <ng-template>
+              Есть стандартный объем 50гр, 100гр и 150гр. Но вы также можете приобрести листовой чай на развес, он будет
+              красиво упакован.
+            </ng-template>
+          </div>
+        </div>
+      </div>
+    </div>
+
 <!--    <accordion>-->
 
 <!--        <accordion-group heading="Собираете ли вы подарочные боксы?" [isOpen]="true">-->
@@ -27,59 +94,6 @@
 <!--      </accordion-group>-->
 <!--    </accordion>-->
   </div>
-  <!--    <div id="accordion" class=" m-auto">-->
-  <!--      <h3 class="text-white bg-primary bg-gradient p-4 rounded ">Собираете ли вы подарочные боксы?</h3>-->
-  <!--      <div >-->
-  <!--        <p class="mb-0">-->
-  <!--          Да, у нас есть такая услуга. Мы можем собрать подарочный бокс на любой вкус, объем и стоимость!-->
-  <!--        </p>-->
-  <!--      </div>-->
-  <!--      <h3 class="text-white bg-primary bg-gradient p-4 rounded mt-3">Сколько у вас разновидностей чая?</h3>-->
-  <!--      <div>-->
-  <!--        <p class="mb-0">-->
-  <!--          У нас представлены 6 сортов.-->
-  <!--        </p>-->
-  <!--      </div>-->
-  <!--      <h3 class="text-white bg-primary bg-gradient p-4 rounded mt-3">В какой срок осуществляется доставка?</h3>-->
-  <!--      <div>-->
-  <!--        <p class="mb-0">-->
-  <!--          По городу 1-2 дня в зависимости от времени оформления заказа. В другие города 3-5 дней.-->
-  <!--        </p>-->
-  <!--      </div>-->
-  <!--      <h3 class="text-white bg-primary bg-gradient p-4 rounded mt-3">У вас обновляется ассортимент?</h3>-->
-  <!--      <div>-->
-  <!--        <p class="mb-0">-->
-  <!--          Да, конечно, периодически есть привозы чаев из различных самых далеких регионов и стран.-->
-  <!--        </p>-->
-  <!--      </div>-->
-  <!--      <h3 class="text-white bg-primary bg-gradient p-4 rounded mt-3">Какого объема у вас пачки чая?</h3>-->
-  <!--      <div>-->
-  <!--        <p class="mb-0">-->
-  <!--          Есть стандартный объем 50гр, 100гр и 150гр. Но вы также можете приобрести листовой чай на-->
-  <!--          развес, он будет красиво упакован.-->
-  <!--        </p>-->
-  <!--      </div>-->
-
-  <!--    </div>-->
-
-<!--<ng-template #modal let-modal>-->
-<!--  <div class=""  id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">-->
-<!--    <div class="modal-dialog">-->
-<!--      <div class="modal-content">-->
-<!--        <div class="modal-header">-->
-<!--          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"-->
-<!--                  (click)="close()"></button>-->
-<!--        </div>-->
-<!--        <div class="modal-body text-center">-->
-<!--          Посмотрите наши чайные коллекции-->
-<!--        </div>-->
-<!--        <div class="modal-footer">-->
-<!--          <button type="button" class="btn btn-primary" routerLink="/products">Смотреть</button>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</ng-template>-->
 
   <ng-template #modal let-modal>
     <div class="modal-header">

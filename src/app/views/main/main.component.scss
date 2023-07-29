@@ -2,10 +2,22 @@ h2 {
   font-family: ArialBold, sans-serif;
 }
 
+.ngbAccordion {
+  font-family: Arial, sans-serif;
+}
+
+.accordion-button::after {
+  background-image: url("../../../assets/images/arrowdown.png");
+}
+
 .popup {
   display: none;
 }
 
 .popup-text, .popup-btn {
   font-family: Arial, sans-serif;
+}
+
+.accordion-body {
+  background-color: transparent;
 }

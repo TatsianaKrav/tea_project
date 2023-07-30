@@ -2,8 +2,8 @@
   <h2 class="mb-5 mt-3 fw-bold text-center text-black">{{getProductsTitle()}}</h2>
   <div class="my-3 text-center fs-4" style="margin: 0 auto" *ngIf="notFound && isDone">Ничего не найдено</div>
   <div class="row g-4" >
-    <div class="col-12 col-sm-6 col-md-4" *ngFor="let product of products" >
-      <div class="card h-100">
+    <div class="col-12 col-sm-6 col-md-4" *ngFor="let product of products" #products>
+      <div class="card h-100" *ngIf="notFound">
         <a href="#" class="item-image ">
           <img src="{{product.image}}" class="card-img-top" alt="item1">
         </a>
